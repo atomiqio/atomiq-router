@@ -1,4 +1,4 @@
-import { contains } from 'Ramda';
+import { contains } from 'ramda';
 import fs from 'fs';
 import path from 'path';
 
