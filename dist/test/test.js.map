@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/test/test.js"],"names":[],"mappings":";;;;AAEA,SAAS,OAAT,EAAkB,YAAW;;AAE3B,KAAG,aAAH,EAAkB,YAAW,EAAX,CAAlB,CAF2B;CAAX,CAAlB","file":"test.js","sourcesContent":["// not a good ideal to use arrow functions with mocha describe(), it()\n\ndescribe('tests', function() {\n\n  it('should pass', function() {});\n\n});\n"]}

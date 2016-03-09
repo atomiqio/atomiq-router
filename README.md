@@ -1,4 +1,4 @@
-atomiq-template
-===============
+atomiq
+======
 
-This is the development version of the atomiq microservice template.
+atomiq microservice support package.
