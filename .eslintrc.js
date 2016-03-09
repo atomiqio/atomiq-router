@@ -100,7 +100,9 @@ module.exports = {
     "new-cap": [
       2,
       {
-        "capIsNewExceptions": ["Router"]
+        "capIsNewExceptions": [
+          "Router"
+        ]
       }
     ],
     "new-parens": 2,
@@ -141,7 +143,7 @@ module.exports = {
     "no-multi-str": 2,
     "no-multiple-empty-lines": 2,
     "no-native-reassign": 2,
-    "no-negated-condition": 2,
+    "no-negated-condition": 0,
     "no-nested-ternary": 2,
     "no-new": 2,
     "no-new-func": 2,
@@ -176,7 +178,8 @@ module.exports = {
     "no-unneeded-ternary": 2,
     "no-unreachable": 2,
     "no-unused-vars": [
-      2, {
+      2,
+      {
         "vars": "all",
         "args": "none"
       }
@@ -190,7 +193,7 @@ module.exports = {
     "no-warning-comments": 0,
     "no-whitespace-before-property": 2,
     "no-with": 2,
-    "object-curly-spacing": [2, "always"],
+    "object-curly-spacing": 0,
     "object-shorthand": 0,
     "one-var": 0,
     "one-var-declaration-per-line": 2,
@@ -208,7 +211,10 @@ module.exports = {
     "radix": 2,
     "require-jsdoc": 0,
     "require-yield": 2,
-    "semi": [2, "always"],
+    "semi": [
+      2,
+      "always"
+    ],
     "semi-spacing": 2,
     "sort-imports": 2,
     "sort-vars": 2,
@@ -226,7 +232,7 @@ module.exports = {
     "valid-jsdoc": 0,
     "vars-on-top": 2,
     "wrap-iife": 2,
-    "wrap-regex": 2,
+    "wrap-regex": 0,
     "yield-star-spacing": 2,
     "yoda": [
       2,
