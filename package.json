@@ -1,6 +1,6 @@
 {
   "name": "atomiq",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "The development version of the template for atomiq microservices",
   "main": "dist/lib",
   "config": {
