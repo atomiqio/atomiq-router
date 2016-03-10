@@ -1,9 +1,14 @@
 {
   "name": "atomiq",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "atomiq microservice support package",
   "repository": "atomiqio/atomiq",
-  "keywords": [ "microservice", "docker", "express", "es6" ],
+  "keywords": [
+    "microservice",
+    "docker",
+    "express",
+    "es6"
+  ],
   "contributors": [
     "Tony Pujals (http://twitter.com/subfuzion)",
     "Peter Svetlichny (http://twitter.com/p_svetlichny",
