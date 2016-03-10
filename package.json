@@ -15,25 +15,15 @@
   },
   "homepage": "https://github.com/atomiqio/atomiq#readme",
   "main": "dist/lib",
-  "config": {
-    "debug": "app*",
-    "image": "app",
-    "name": "app-ctr",
-    "start_cmd": "node ./dist/app.js",
-    "debug_cmd": "node-debug --no-preload --web-host 0.0.0.0 ./dist/app.js"
-  },
   "scripts": {
     "test": "mocha dist/test",
-    "watch": "DEBUG=$npm_package_config_debug babel --watch src -d dist --source-maps",
-    "kill-watch": "pkill -f babel",
+    "watch": "babel --watch src -d dist --source-maps",
     "clean": "rm -rf ./dist",
-    "build": "npm run babel-build",
-    "babel-build": "npm run clean && DEBUG=$npm_package_config_debug babel src -d dist --source-maps",
-    "babel-build-inline-sourcemaps": "npm run clean && babel src -d dist --source-maps inline"
+    "babel": "npm run clean && babel src -d dist --source-maps",
+    "babel-inline": "npm run clean && babel src -d dist --source-maps inline"
   },
   "dependencies": {
     "babel-polyfill": "^6.3.14",
-    "body-parser": "^1.15.0",
     "debug": "^2.2.0",
     "logster": "0.0.5",
     "ramda": "^0.19.1"
