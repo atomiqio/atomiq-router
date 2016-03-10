@@ -1,7 +1,19 @@
 {
   "name": "atomiq",
   "version": "0.0.13",
-  "description": "The development version of the template for atomiq microservices",
+  "description": "atomiq microservice support package",
+  "repository": "atomiqio/atomiq",
+  "keywords": [ "microservice", "docker", "express", "es6" ],
+  "contributors": [
+    "Tony Pujals (http://twitter.com/subfuzion)",
+    "Peter Svetlichny (http://twitter.com/p_svetlichny",
+    "Henry Allen-Tilford (http://twitter.com/generalhenry)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atomiqio/atomiq/issues"
+  },
+  "homepage": "https://github.com/atomiqio/atomiq#readme",
   "main": "dist/lib",
   "config": {
     "debug": "app*",
