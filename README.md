@@ -34,3 +34,28 @@ Then generate your new microservice project:
 ```bash
 yo atomiq [name]
 ```
+
+## Routing
+
+This will be more fully documented shortly.
+
+
+Automatic routing is optional. Please see the automatically generated routes for now.
+
+Routes are ES6 modules that export a default class.
+
+If you decide to add a constructor to your class, make sure to call super(app):
+
+    default export class MyRoute extends Route {
+      constructor(app) {
+        super(app);
+
+        // you have access to the app and the express router for this route
+        this.app ...
+        this.router ...
+      }
+    }
+
+All [Express/HTTP methods](http://expressjs.com/en/4x/api.html#app.METHOD) are supported. Any method matching a verb name is automatically
+added to the router for this route. If you need to use an HTTP verb that is not a
+valid JavaScript name (there is only one: 'm-search'), you will need to attach it to `this.router` in the constructor. See
