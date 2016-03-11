@@ -7,8 +7,12 @@ atomiq
 not a framework and doesn't get in the way of Express, but it does offer a nice convention
 for directory-based routing that you can use if you choose to.
 
-It generates ES6 source files and provides npm run script support for `npm run babel`, `npm run watch`,
-and `npm run nodemon`.
+It generates a few sample routes using ES6 classes and provides
+npm run script support for:
+
+  * `npm run babel` (includes support for ES6 and async/await)
+  * `npm run watch`
+  * `npm run nodemon`
 
 Features:
 
@@ -58,4 +62,8 @@ If you decide to add a constructor to your class, make sure to call super(app):
 
 All [Express/HTTP methods](http://expressjs.com/en/4x/api.html#app.METHOD) are supported. Any method matching a verb name is automatically
 added to the router for this route. If you need to use an HTTP verb that is not a
-valid JavaScript name (there is only one: 'm-search'), you will need to attach it to `this.router` in the constructor. See
+valid JavaScript name (there is only one: 'm-search'), you will need to attach it to `this.router` in the constructor:
+
+    this.router['m-search'](req, res) {
+      ...
+    }
