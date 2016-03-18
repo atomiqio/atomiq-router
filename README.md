@@ -33,3 +33,7 @@ valid JavaScript name (there is only one: 'm-search'), you will need to attach i
     this.router['m-search'](req, res) {
       ...
     }
+
+
+[npm-image]: https://badge.fury.io/js/atomiq.svg
+[npm-url]: https://npmjs.org/package/atomiq
