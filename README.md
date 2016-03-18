@@ -1,5 +1,4 @@
-atomiq
-======
+# atomiq [![NPM version][npm-image]][npm-url]
 
 > Microservices with Docker and Node.js (ES6/7)
 
