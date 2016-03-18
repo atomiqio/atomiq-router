@@ -7,7 +7,7 @@ atomiq
 not a framework and doesn't get in the way of Express, but it does offer a nice convention
 for directory-based routing that you can use if you choose to.
 
-Atomiq uses ES6 classes and ES7 async/await. See [atomiq/generator-atomiq](https://github.com/atomiqio/generator-atomiq) for generating a new microservice package with full Babel and Docker support.
+Atomiq uses ES6 classes and ES7 async/await. See [atomiq/generator-atomiq](https://github.com/atomiqio/generator-atomiq) (a Yeoman generator) for scaffolding microservice packages with full Babel and Docker support.
 
 ## Routing
 
