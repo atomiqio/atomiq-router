@@ -11,7 +11,7 @@ Atomiq uses ES6 classes and ES7 async/await. See [atomiq/generator-atomiq](https
 
 ## Routing
 
-Automatic routing is optional. Please see the automatically generated routes for now.
+Automatic routing is optional. Use the [generator](https://github.com/atomiqio/generator-atomiq) to see examples of automatically generated routes for now.
 
 Routes are ES6 modules that export a default class.
 
