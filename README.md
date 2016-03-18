@@ -7,42 +7,9 @@ atomiq
 not a framework and doesn't get in the way of Express, but it does offer a nice convention
 for directory-based routing that you can use if you choose to.
 
-It generates a few sample routes using ES6 classes and provides
-npm run script support for:
-
-  * `npm run babel` (includes support for ES6 and async/await)
-  * `npm run watch`
-  * `npm run nodemon`
-
-Features:
-
-  * Docker support for production and development, including debugging support with [Node Inspector](https://github.com/node-inspector/node-inspector)
-  * Signal handling for graceful server shutdown (including inside of Docker containers)
-  * [Babel](https://babeljs.io) support
-  * [ESLint](http://eslint.org/) / [esformatter](https://github.com/millermedeiros/esformatter) support
-
-
-## Generating an `atomiq` microservice
-
-Install [Yeoman](http://yeoman.io)
-
-    npm install -g yo
-
-Install [generator-atomiq](https://github.com/atomiqio/generator-atomiq)
-
-    npm install -g generator-atomiq
-
-
-Then generate your new microservice project:
-
-```bash
-yo atomiq [name]
-```
+Atomiq uses ES6 classes and ES7 async/await. See [atomiq/generator-atomiq](https://github.com/atomiqio/generator-atomiq) for generating a new microservice package with full Babel and Docker support.
 
 ## Routing
-
-This will be more fully documented shortly.
-
 
 Automatic routing is optional. Please see the automatically generated routes for now.
 
