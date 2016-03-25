@@ -57,12 +57,15 @@ export default class {
     let rootComponent = this.loadRouteComponents(routesPath, rootComponent);
     log(`routes: ${JSON.stringify(rootComponent.inspect(), null, 2)}`);
 
+    let subRouter = this._express.Router({ mergeParams: true });
+    baseRouter.use(baseRoute, subRouter);
+
     let loadLevel = (component, route, router, param) => {
       component.children.forEach(comp => {
         if (comp.isFile) {
           let Resource = require(comp.filepath).default;
           let resource = new Resource(this.app);
-          let compRoute = comp.isIndex ? this.join(route, param) : this.join(route, param, comp.name);
+          let compRoute = comp.isIndex ? this.join('/', param) : this.join('/', param, comp.name);
           router.use(compRoute, resource.router);
         } else if (comp.isDirectory) {
           let subRouter = this._express.Router({ mergeParams: true });
@@ -75,7 +78,7 @@ export default class {
       });
     };
 
-    loadLevel(rootComponent, baseRoute, baseRouter);
+    loadLevel(rootComponent, baseRoute, subRouter);
   }
 
 }
