@@ -66,7 +66,7 @@ export default class {
           router.use(compRoute, resource.router);
         } else if (comp.isDirectory) {
           let subRouter = this._express.Router({ mergeParams: true });
-          let subRoute = this.join(route, comp.name);
+          let subRoute = this.join('/', comp.name);
           router.use(subRoute, subRouter);
           loadLevel(comp, subRoute, subRouter);
         } else if (comp.isParam) {
