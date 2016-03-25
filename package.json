@@ -1,6 +1,6 @@
 {
   "name": "atomiq",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "atomiq microservice support package",
   "repository": "atomiqio/atomiq",
   "keywords": [
