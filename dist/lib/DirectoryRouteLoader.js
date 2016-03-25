@@ -100,7 +100,7 @@ var _class = function () {
             router.use(compRoute, resource.router);
           } else if (comp.isDirectory) {
             var subRouter = _this2._express.Router({ mergeParams: true });
-            var subRoute = _this2.join(route, comp.name);
+            var subRoute = _this2.join('/', comp.name);
             router.use(subRoute, subRouter);
             loadLevel(comp, subRoute, subRouter);
           } else if (comp.isParam) {
