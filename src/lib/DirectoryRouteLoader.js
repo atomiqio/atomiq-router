@@ -62,7 +62,7 @@ export default class {
         if (comp.isFile) {
           let Resource = require(comp.filepath).default;
           let resource = new Resource(this.app);
-          let compRoute = comp.isIndex ? this.join('/', param) : this.join('/', param, comp.name);
+          let compRoute = comp.isIndex ? this.join(baseRoute, param) : this.join(baseRoute, param, comp.name);
           router.use(compRoute, resource.router);
         } else if (comp.isDirectory) {
           let subRouter = this._express.Router({ mergeParams: true });
