@@ -96,7 +96,7 @@ var _class = function () {
           if (comp.isFile) {
             var Resource = require(comp.filepath).default;
             var resource = new Resource(_this2.app);
-            var compRoute = comp.isIndex ? _this2.join('/', param) : _this2.join('/', param, comp.name);
+            var compRoute = comp.isIndex ? _this2.join(route, param) : _this2.join(route, param, comp.name);
             router.use(compRoute, resource.router);
           } else if (comp.isDirectory) {
             var subRouter = _this2._express.Router({ mergeParams: true });
