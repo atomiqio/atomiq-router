@@ -91,25 +91,28 @@ var _class = function () {
       var rootComponent = this.loadRouteComponents(routesPath, rootComponent);
       log('routes: ' + JSON.stringify(rootComponent.inspect(), null, 2));
 
+      var subRouter = this._express.Router({ mergeParams: true });
+      baseRouter.use(baseRoute, subRouter);
+
       var loadLevel = function loadLevel(component, route, router, param) {
         component.children.forEach(function (comp) {
           if (comp.isFile) {
             var Resource = require(comp.filepath).default;
             var resource = new Resource(_this2.app);
-            var compRoute = comp.isIndex ? _this2.join(route, param) : _this2.join(route, param, comp.name);
+            var compRoute = comp.isIndex ? _this2.join('/', param) : _this2.join('/', param, comp.name);
             router.use(compRoute, resource.router);
           } else if (comp.isDirectory) {
-            var subRouter = _this2._express.Router({ mergeParams: true });
+            var _subRouter = _this2._express.Router({ mergeParams: true });
             var subRoute = _this2.join('/', comp.name);
-            router.use(subRoute, subRouter);
-            loadLevel(comp, subRoute, subRouter);
+            router.use(subRoute, _subRouter);
+            loadLevel(comp, subRoute, _subRouter);
           } else if (comp.isParam) {
             loadLevel(comp, route, router, comp.name);
           }
         });
       };
 
-      loadLevel(rootComponent, baseRoute, baseRouter);
+      loadLevel(rootComponent, baseRoute, subRouter);
     }
   }, {
     key: '_express',
