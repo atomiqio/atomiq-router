@@ -1,6 +1,6 @@
-# atomiq [![c][npm-image]][npm-url]
+# atomiq
 
-[![Join the chat at https://gitter.im/atomiqio/atomiq](https://badges.gitter.im/atomiqio/atomiq.svg)](https://gitter.im/atomiqio/atomiq?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![c][npm-image]][npm-url] [![Join the chat at https://gitter.im/atomiqio/atomiq](https://badges.gitter.im/atomiqio/atomiq.svg)](https://gitter.im/atomiqio/atomiq?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 > Microservices with Docker and Node.js (ES6/7)
 
